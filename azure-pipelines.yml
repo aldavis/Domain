@@ -25,7 +25,7 @@ steps:
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
-    projects: 'CommonLib/CommonLib.csproj'
+    projects: 'TFL.Domain.csproj'
 
 # The second task is dotnet pack command again pointing to the csproj file
 # The nobuild means the project will not be compiled before running pack, because its already built in above step
