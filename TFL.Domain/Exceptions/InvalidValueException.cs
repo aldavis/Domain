@@ -2,9 +2,9 @@
 
 namespace TFL.Domain.Exceptions
 {
-	public class InvalidValueException : Exception
+	public class InvalidValue : Exception
 	{
-		public InvalidValueException(Type type, string message)
+		public InvalidValue(Type type, string message)
 			: base($"Value of {type.Name} {message}") { }
 	}
 }

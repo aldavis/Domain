@@ -28,7 +28,7 @@ namespace Specs
 
         protected override void EnsureValidState()
 	    {
-		    throw new BusinessRuleException("Entity is in an invalid state.");
+		    throw new BusinessRuleViolation("Entity is in an invalid state.");
 	    }
     }
 
@@ -46,7 +46,7 @@ namespace Specs
 		{
 			var invalidEntity = new InvalidStateEntity();
 
-			Assert.Throws<BusinessRuleException>(() => invalidEntity.AddEvent());
+			Assert.Throws<BusinessRuleViolation>(() => invalidEntity.AddEvent());
 		}
 
 		[Fact]
